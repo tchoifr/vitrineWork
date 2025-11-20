@@ -241,6 +241,7 @@ body {
 /* =============== FEATURE CARDS =============== */
 
 .feature-card {
+  text-align: center;
   background: radial-gradient(circle at top left, rgba(88, 28, 135, 0.35), rgba(15, 23, 42, 0.95));
   border-radius: 18px;
   padding: 22px 22px 20px;
@@ -279,8 +280,8 @@ body {
 .feature-icon {
   position: relative;
   z-index: 1;
-  width: 28px;
-  height: 28px;
+  width: 40px;
+  height: 40px;
   border-radius: 10px;
   margin-bottom: 14px;
   display: inline-flex;
@@ -912,8 +913,8 @@ body {
   width: 3px;
   top: 35px;        
   bottom: 35px;      
-  background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
-  border-radius: 999px;
+  background: radial-gradient(circle at 30% 0, #60a5fa, #4c1d95);
+  box-shadow: 0 0 18px rgba(59, 130, 246, 0.7);  border-radius: 999px;
   height: 0;
   animation: lineGrow 1.2s ease forwards;
 }
@@ -1157,6 +1158,11 @@ body {
     0 0 0 1px rgba(191, 219, 254, 0.35),
     0 40px 85px rgba(0, 0, 0, 0.95),
     0 0 75px rgba(59, 130, 246, 0.9);
+        min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .cta-glow {
@@ -1185,17 +1191,16 @@ body {
 .cta-actions {
   position: relative;
   z-index: 1;
-  margin-top: 28px;
+  margin: 50px;
   display: flex;
   justify-content: center;
-  gap: 14px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
 .cta-metrics {
   position: relative;
   z-index: 1;
-  margin-top: 30px;
   display: flex;
   justify-content: center;
   gap: 32px;

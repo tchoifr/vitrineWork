@@ -57,3 +57,22 @@ document.addEventListener("DOMContentLoaded", () => {
     // Déclenche au chargement pour les éléments déjà visibles
     triggerAnimation();
 });
+
+
+
+// ===============================
+// Intersection Observer pour les reveals
+// ===============================
+document.addEventListener("DOMContentLoaded", () => {
+  const reveals = document.querySelectorAll(".reveal");
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  reveals.forEach((el) => obs.observe(el));
+});
