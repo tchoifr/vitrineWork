@@ -1305,7 +1305,7 @@ body {
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1024px) {
   .section {
     padding-inline: 20px;
   }
@@ -1325,6 +1325,9 @@ body {
   .eco-left{
     width: 100%;
     text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
   .eco-container{
     flex-direction: column;
