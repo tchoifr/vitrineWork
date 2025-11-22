@@ -153,6 +153,17 @@ html {
   max-width: 460px;
 }
 
+.section-scroll {
+  opacity: 0;
+  transform: translateY(70px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.section-scroll.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Gradient texte */
 
 .gradient-text {

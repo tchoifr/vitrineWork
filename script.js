@@ -34,7 +34,25 @@ window.addEventListener("load", () => {
     }, delay);
 });
 
+// Animation sections depuis le bas
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section");
+    if (!sections.length) return;
 
+    const sectionObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("section-visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.18, rootMargin: "0px 0px -10% 0px" });
+
+    sections.forEach((section) => {
+        section.classList.add("section-scroll");
+        sectionObserver.observe(section);
+    });
+});
 
 // ===============================
 // Roadmap Reveal Animation
