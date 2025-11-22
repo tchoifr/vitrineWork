@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("load", () => {
     const loader = document.getElementById("loader");
     if (!loader) return;
-    const MIN_DELAY = 2000;
+    const MIN_DELAY = 3000;
     const elapsed = performance.now();
     const delay = Math.max(MIN_DELAY - elapsed, 0);
 
