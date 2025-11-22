@@ -20,6 +20,20 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".stat-number").forEach(num => animateCounter(num));
 });
 
+// Loader full-screen
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+    if (!loader) return;
+    const MIN_DELAY = 2000;
+    const elapsed = performance.now();
+    const delay = Math.max(MIN_DELAY - elapsed, 0);
+
+    setTimeout(() => {
+        loader.classList.add("loader--hide");
+        setTimeout(() => loader.remove(), 700);
+    }, delay);
+});
+
 
 
 // ===============================
