@@ -1437,7 +1437,7 @@ html {
 .cta-actions {
   position: relative;
   z-index: 1;
-  margin: 50px;
+  margin: 75px;
   display: flex;
   justify-content: center;
   gap: 20px;
