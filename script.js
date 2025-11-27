@@ -108,3 +108,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
   reveals.forEach((el) => obs.observe(el));
 });
+
+
+
+// === Popup Logic (multiple buttons allowed) ===
+const joinDaoButtons = document.querySelectorAll(".joinDaoBtn");
+const popup = document.getElementById("popup");
+const closePopup = document.getElementById("closePopup");
+
+// Open popup from any button
+joinDaoButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    popup.classList.add("active");
+  });
+});
+
+// Close popup
+if (closePopup) {
+  closePopup.addEventListener("click", () => {
+    popup.classList.remove("active");
+  });
+}
+
+// Close when clicking overlay
+popup.addEventListener("click", (e) => {
+  if (e.target === popup) popup.classList.remove("active");
+});

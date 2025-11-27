@@ -23,44 +23,38 @@
   <meta name="theme-color" content="#0A0C12">
   <meta name="color-scheme" content="dark light">
 
-  <!-- ================= FAVICONS ================= -->
+  <!-- ================= FAVICON ================= -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
 
-  <!-- ================= OPEN GRAPH (FACEBOOK / LINKEDIN) ================= -->
+  <!-- ================= OPEN GRAPH ================= -->
   <meta property="og:title" content="Byhnex — The Future of Decentralized Work">
   <meta property="og:description"
     content="Blockchain-powered work platform with escrow contracts, DAO governance and the $BHN token.">
-  <meta property="og:image" content="https://byhnex.com/img/og-image.jpg">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://byhnex.com">
-  <meta property="og:site_name" content="Byhnex">
 
-  <!-- ================= TWITTER / X ================= -->
-  <meta name="twitter:card" content="summary_large_image">
+  <!-- PAS D’IMAGE OG (pour éviter une erreur) -->
+
+  <!-- ================= TWITTER ================= -->
+  <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Byhnex — Decentralized Work Platform">
   <meta name="twitter:description"
     content="Join Byhnex — the decentralized work platform with escrow smart contracts, NFTs and DAO governance.">
-  <meta name="twitter:image" content="https://byhnex.com/img/og-image.jpg">
   <meta name="twitter:site" content="@Byhnex">
   <meta name="twitter:creator" content="@Byhnex">
-
-  <!-- ================= INSTAGRAM / TIKTOK (SEO association) ================= -->
-  <meta property="instagram:username" content="byhnex">
-  <meta property="tiktok:username" content="byhnex">
 
   <!-- ================= FONTS ================= -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
-  <!-- ================= MAIN CSS ================= -->
+  <!-- ================= CSS ================= -->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="animations.css">
 
   <!-- ================= JS ================= -->
   <script defer src="script.js"></script>
 </head>
+
 
 
 
@@ -117,16 +111,17 @@
   </p>
 
   <div class="hero-cta">
-    <button class="btn btn-primary">
-      Join the DAO
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <path d="M3.33333 8H12.6667" stroke="#0D1016" stroke-width="1.33333" stroke-linecap="round"
-          stroke-linejoin="round" />
-        <path d="M8 3.3335L12.6667 8.00016L8 12.6668" stroke="#0D1016" stroke-width="1.33333" stroke-linecap="round"
-          stroke-linejoin="round" />
-      </svg>
-    </button>
+<button class="btn btn-primary joinDaoBtn">
+  Join the DAO
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <path d="M3.33333 8H12.6667" stroke="#0D1016" stroke-width="1.33333" stroke-linecap="round"
+      stroke-linejoin="round" />
+    <path d="M8 3.3335L12.6667 8.00016L8 12.6668" stroke="#0D1016" stroke-width="1.33333" stroke-linecap="round"
+      stroke-linejoin="round" />
+  </svg>
+</button>
+
   </div>
 </div>
 
@@ -650,7 +645,7 @@
         Join the Web3 revolution and help build the economy of tomorrow.
       </p>
 
-      <button style="margin-top: 20px;" class="btn btn-primary">Join the Community</button>
+      <button style="margin-top: 20px;" class="btn btn-primary joinDaoBtn">Join the Community</button>
     </div>
 
     <!-- RIGHT METRIC CARD -->
@@ -897,7 +892,7 @@
     </p>
 
     <div class="cta-actions">
-      <a href="#" class="btn btn-primary">Get Started</a>
+      <button class="btn btn-primary joinDaoBtn">Get Started</button>
     </div>
     <div class="cta-metrics">
       <div>
@@ -938,32 +933,13 @@
       </p>
     </div>
 
-    <div class="footer-col">
-      <h4>Product</h4>
-      <ul>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Tokenomics</a></li>
-        <li><a href="#">Governance</a></li>
-        <li><a href="#">Roadmap</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h4>Resources</h4>
-      <ul>
-        <li><a href="#">Documentation</a></li>
-        <li><a href="#">Whitepaper</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Support</a></li>
-      </ul>
-    </div>
 
     <div class="footer-col">
       <h4>Community</h4>
       <ul class="footer-socials">
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Discord</a></li>
-        <li><a href="#">Telegram</a></li>
+        <li><a href="https://x.com/Byhnex">X</a></li>
+        <li><a href="https://www.instagram.com/byhnex/">Instagram</a></li>
+        <li><a href="https://www.tiktok.com/@byhnex">Tiktok</a></li>
       </ul>
     </div>
   </div>
@@ -974,7 +950,14 @@
 </footer>
 
 
-</body>
-<script src="script.js"></script>
+<div id="popup" class="popup-overlay">
+  <div class="popup-content">
+    <h2>Launching January 1st</h2>
+    <p>The platform will be available on January 1st. Be among the very first to join the Byhnex DAO.</p>
+    <button id="closePopup" class="popup-close">Close</button>
+  </div>
+</div>
 
+
+</body>
 </html>
